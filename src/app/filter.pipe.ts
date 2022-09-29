@@ -1,7 +1,8 @@
 import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
-  name: 'filter'
+  name: 'filter',
+  pure: false // для того щоб пайп спрацьовував при кодній зміні в масиві або обєкті
 })
 export class FilterPipe implements PipeTransform {
 
